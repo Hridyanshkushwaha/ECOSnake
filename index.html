@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOSnake -A tour to environment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      background-image: url(http://ts4.mm.bing.net/th?id=OIP.N9Nzjw0TwMco2H3k0On8ZgHaFO&pid=15.1);
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+    canvas {
+      border: 10px solid black;
+      display: block;
+      margin: 20px auto;
+    }
+    #startScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      background-image: url(http://ts4.mm.bing.net/th?id=OIP.N9Nzjw0TwMco2H3k0On8ZgHaFO&pid=15.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgb(127, 228, 250);
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    #popup button {
+      margin-top: 10px;
+      
+    }
+    button:hover{
+      border-radius: 10px;
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div id="startScreen">
+    <h1>Snake Game</h1>
+    <p>Welcome to the Snake Game with Environmental Facts!</p>
+    <p>
+      **How to Play:**<br>
+      - Use the arrow keys to move the snake.<br>
+      - Eat items (fruits, vegetables, water) to increase your score.<br>
+      - Avoid colliding with the walls or yourself.<br>
+      - When the game ends, you'll learn interesting environmental facts.
+    </p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+  <div id="popup">
+    <p id="fact"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <p id="score">Score: 0</p>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
